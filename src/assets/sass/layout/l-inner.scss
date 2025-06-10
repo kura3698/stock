@@ -1,24 +1,15 @@
 @use "../config/" as *;
 
 .l-inner {
-  position: relative;
-  width: 100%;
-  max-width: px($pc-inner-sum);
-  height: inherit;
-  padding: 0 rm($pc-sidePadding);
+  width: min(calc(rm(1200) + rm(40) * 2), 100%);
+  padding-inline: rm(40);
   margin-inline: auto;
 
-  @include mq(sm) {
-    width: 100%;
-    max-width: px($sp-inner-sum);
-    padding: 0 rm($sp-sidePadding);
+  @include mq("md") {
+    padding-inline: rm(20);
   }
 }
 
-.l-inner__narrow {
-  max-width: rm($pc-narrow-inner);
-  @include mq(sm) {
-    padding: 0 rm($sp-sidePadding);
-    max-width: px($sp-inner);
-  }
+.l-inner--narrow {
+  width: min(calc(rm(1000) + rm(40) * 2), 100%);
 }

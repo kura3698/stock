@@ -11,13 +11,13 @@ html {
 }
 
 body {
-  color: $text-main;
+  color: $color-text;
   font-family: $ff;
   letter-spacing: 0.1em;
   overflow-x: hidden;
   position: relative;
   z-index: -1;
-  background-color: $bg-primary;
+  background-color: $color-bg;
 }
 
 a {
@@ -115,7 +115,7 @@ a[href^="tel:"] {
 
 /* すべてのフォーカス可能な要素に統一したアウトラインを適用 */
 :focus-visible {
-  outline: 2px solid $main-color; /* 好きな色に変更 */
+  outline: 2px solid $color-main; /* 好きな色に変更 */
   border-radius: 4px; /* 角丸にするなら追加 */
 }
 

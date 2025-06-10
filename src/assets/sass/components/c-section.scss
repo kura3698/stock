@@ -1,0 +1,11 @@
+@use '../config/' as *;
+
+.c-section__title{
+    color: #333;
+    font-family: $ff;
+    font-size: rm(32);
+    font-weight: 700;
+    @include mq("md") {
+        font-size: rm(24);
+    }
+}
