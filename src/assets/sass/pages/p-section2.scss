@@ -1,0 +1,56 @@
+@use "../config/" as *;
+
+.p-section2 {
+}
+
+.p-section2__contents {
+  display: flex;
+  flex-direction: column;
+  row-gap: rm(106);
+
+  @include mq("sm") {
+    row-gap: rm(60);
+  }
+}
+
+.p-section2__item {
+  padding: rm(71) rm(100);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #d9d9d9;
+    top: 0;
+    width: calc(100% + (50vw - 50%));
+    z-index: -1;
+    height: 100%;
+  }
+
+  @include mq("sm") {
+    padding: rm(60) 0 rm(61) rm(28);
+  }
+
+  &:nth-of-type(odd) {
+    &::after {
+      right: 0;
+      border-radius: 0 rm(20) rm(20) 0;
+    }
+  }
+
+  &:nth-of-type(even) {
+    &::after {
+      left: 0;
+      border-radius: rm(20) 0 0 rm(20);
+    }
+  }
+}
+
+.p-section2__title {
+  margin-block-end: rm(28);
+  @include mq("sm") {
+    margin-block-end: rm(20);
+  }
+}
+
+.p-section2__text {
+}
