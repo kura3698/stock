@@ -1,15 +1,15 @@
 @use "../config/" as *;
 
 .l-inner {
-  width: min(calc(rm(1200) + rm(40) * 2), 100%);
+  width: min(calc(rm($pc-inner) + rm($pc-sidePadding) * 2), 100%);
   padding-inline: rm(40);
   margin-inline: auto;
 
   @include mq("md") {
-    padding-inline: rm(20);
+    padding-inline: rm($sp-sidePadding);
   }
 }
 
 .l-inner--narrow {
-  width: min(calc(rm(1000) + rm(40) * 2), 100%);
+  width: min(calc(rm($pc-narrow-inner) + rm($pc-sidePadding) * 2), 100%);
 }

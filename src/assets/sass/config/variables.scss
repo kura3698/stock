@@ -7,10 +7,10 @@ $ff-en: "Roboto", sans-serif; //英語onlyのフォント
 //===========================================
 //   レイアウト (単位は不要)
 //===========================================
-$pc-inner: 1040; // pc版inner幅
+$pc-inner: 1200; // pc版inner幅
 $pc-sidePadding: 40; //pc版サイドのpadding
 $pc-inner-sum: calc($pc-inner + $pc-sidePadding * 2);
-$pc-narrow-inner: 800; //狭いinner幅
+$pc-narrow-inner: 1000; //狭いinner幅
 $pc-narrow-inner-sum: calc($pc-narrow-inner + $pc-sidePadding * 2);
 $breakpoint: 768; // ブレイクポイント (pc版カンプとsp版カンプの境界)
 $sp-sidePadding: 20; //sp版サイドのpadding
