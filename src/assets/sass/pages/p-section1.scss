@@ -1,10 +1,10 @@
 @use "../config/" as *;
 
-.p-flex {
+.p-section1 {
   margin-block-start: rm(100);
 }
 
-.p-flex__content {
+.p-section1__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,14 +18,14 @@
   }
 }
 
-.p-flex__text-wrap {
+.p-section1__text-wrap {
   width: rm(526);
   @media (max-width: 999px) {
     display: contents;
   }
 }
 
-.p-flex__title {
+.p-section1__title {
   margin-block-end: rm(43);
   @media (max-width: 999px) {
     order: 1;
@@ -33,13 +33,13 @@
   }
 }
 
-.p-flex__text {
+.p-section1__text {
   @media (max-width: 999px) {
     order: 3;
   }
 }
 
-.p-flex__image-wrap {
+.p-section1__image-wrap {
   width: calc(557 / 1200 * 100%);
   aspect-ratio: 557 / 456;
   height: auto;
@@ -52,7 +52,7 @@
   }
 }
 
-.p-flex__image1 {
+.p-section1__image1 {
   width: calc(359 / 557 * 100%);
   height: auto;
   aspect-ratio: 359 / 291;
@@ -63,7 +63,7 @@
   }
 }
 
-.p-flex__image2 {
+.p-section1__image2 {
   width: calc(270 / 557 * 100%);
   height: auto;
   aspect-ratio: 270/291;
