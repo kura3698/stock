@@ -1,0 +1,75 @@
+@use "../config/" as *;
+
+.p-section4 {
+}
+
+.p-section4__title {
+  text-align: center;
+  margin-block-end: rm(60);
+}
+
+.p-section4__contents {
+  display: flex;
+  flex-direction: column;
+  row-gap: rm(40);
+
+  @include mq("sm") {
+    row-gap: rm(31);
+    max-width: rm(600);
+    margin-inline: auto;
+  }
+}
+
+.p-section4__item {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  column-gap: rm(24);
+  grid-template-areas: "date cate title icon";
+  align-items: center;
+  padding-block-end: rm(20);
+  border-block-end: 1px solid #333;
+  @include mq("sm") {
+    grid-template-areas:
+      "date cate icon"
+      "title title title";
+    grid-template-columns: auto 1fr auto;
+    row-gap: rm(19);
+  }
+}
+
+.p-section4__item-date {
+  grid-area: date;
+  color: #333;
+  font-size: rm(16);
+  font-weight: 400;
+}
+
+.p-section4__item-category {
+  grid-area: cate;
+  color: #333;
+  font-size: rm(16);
+  font-weight: 400;
+  padding: rm(4) rm(20) rm(5);
+  background: #d9d9d9;
+  border-radius: rm(4);
+  width: fit-content;
+}
+
+.p-section4__item-title {
+  grid-area: title;
+  margin-inline-start: rm(28);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; // 最大の行数を入れる
+
+  @include mq("sm") {
+    margin-inline-start: 0;
+    -webkit-line-clamp: 3; // スマホでは3行にする
+  }
+}
+
+.p-section4__item-icon {
+  grid-area: icon;
+  width: rm(10.47);
+}
