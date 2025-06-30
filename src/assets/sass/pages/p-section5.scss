@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "../config/" as *;
 
 .p-section5 {
@@ -41,7 +42,7 @@
   @for $i from 2 through 10 {
     &:nth-of-type(#{$i}) {
       $index: $i - 2;
-      $row: floor($index / 2) + 1;
+      $row: math.floor(math.div($index, 2)) + 1;
       $col: if($i % 2 == 0, 2, 3);
       grid-column: #{$col} / #{$col + 1};
       grid-row: #{$row} / #{$row + 1};
